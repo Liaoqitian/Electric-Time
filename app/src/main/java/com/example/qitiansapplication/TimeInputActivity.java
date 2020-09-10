@@ -3,13 +3,16 @@ package com.example.qitiansapplication;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.text.DecimalFormat;
 import java.util.HashMap;
 
-public class OtherTransportationActivity extends AppCompatActivity {
+public class TimeInputActivity extends AppCompatActivity {
     private static DecimalFormat df = new DecimalFormat("0.00");
     private static HashMap<Integer, String> stringMap = new HashMap<Integer, String>() {{
         put(1, "Walking");
@@ -51,16 +54,16 @@ public class OtherTransportationActivity extends AppCompatActivity {
     }};
 
     private static HashMap<Integer, Integer> textIDMap = new HashMap<Integer, Integer>() {{
-        put(1, R.id.walkingTime);
-        put(2, R.id.boostedTime);
-        put(3, R.id.evolveTime);
-        put(4, R.id.oneWheelTime);
-        put(5, R.id.motoTecTime);
-        put(6, R.id.segwayTime);
-        put(7, R.id.segwayPlusTime);
-        put(8, R.id.razorTime);
-        put(9, R.id.geoBladeTime);
-        put(10, R.id.hovertraxTime);
+        put(1, R.id.walkingDistance);
+        put(2, R.id.boostedDistance);
+        put(3, R.id.evolveDistance);
+        put(4, R.id.oneWheelDistance);
+        put(5, R.id.motoTecDistance);
+        put(6, R.id.segwayDistance);
+        put(7, R.id.segwayPlusDistance);
+        put(8, R.id.razorDistance);
+        put(9, R.id.geoBladeDistance);
+        put(10, R.id.hovertraxDistance);
     }};
 
     private static HashMap<Integer, Integer> imageIDMap = new HashMap<Integer, Integer>() {{
@@ -92,12 +95,7 @@ public class OtherTransportationActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.other_transportation_activity);
-        double distance = getIntent().getExtras().getDouble("distance");
-        double timeFactor = getIntent().getExtras().getDouble("timeFactor");
-        TextView descriptionTextView = (TextView) findViewById(R.id.descriptionTextView);
-        String header = "In order to travel " + distance + " miles";
-        descriptionTextView.setText(header);
+        setContentView(R.layout.activity_time_input);
 
         for (Integer index: stringMap.keySet()) {
             int imageID = (imageIDMap != null) ? imageIDMap.get(index) : -1;
@@ -105,22 +103,26 @@ public class OtherTransportationActivity extends AppCompatActivity {
             ImageView iv = (ImageView) findViewById(imageID);
             iv.setImageResource(image);
         }
+        Button computeDistanceButton = (Button) findViewById(R.id.computeDistance);
+        computeDistanceButton.setOnClickListener(new View.OnClickListener() {
 
-        for (Integer index: stringMap.keySet()) {
-            String transportation = stringMap.get(index);
-            int id = (textIDMap != null) ? textIDMap.get(index) : -1;
-            TextView tv = (TextView)findViewById(id);
-            int range = rangeMap.get(index);
-            if (distance > range) tv.setText("Exceeded");
-            else {
-                double speed = (speedMap != null) ? speedMap.get(index) : -1;
-                double time = speed != 0.0 ? distance / speed : 0.0;
-                String output = "";
-                if (timeFactor == 1) output = df.format(time) + " hours";
-                else if (timeFactor == 60) output = df.format(time * 60) + "minutes";
-                tv.setText(output);
+            @Override
+            public void onClick(View view) {
+                EditText NumEditText = (EditText) findViewById(R.id.timeblank);
+                double time = Double.parseDouble(NumEditText.getText().toString());
+
+                for (Integer index: stringMap.keySet()) {
+                    String transportation = stringMap.get(index);
+                    int id = (textIDMap != null) ? textIDMap.get(index) : -1;
+                    TextView tv = (TextView)findViewById(id);
+                    int range = rangeMap.get(index);
+                    double speed = (speedMap != null) ? speedMap.get(index) : -1;
+                    double distance = speed * time / 60;
+                    distance = (range < distance) ? range : distance;
+                    String output = df.format(distance) + "miles";
+                    tv.setText(output);
+                }
             }
-        }
-
+        });
     }
 }

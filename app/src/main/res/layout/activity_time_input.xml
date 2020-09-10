@@ -4,29 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".OtherTransportationActivity">
-
-    <TextView
-        android:id="@+id/descriptionTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/warning"
-        android:textColor="#000000"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.079" />
-
-    <TextView
-        android:id="@+id/blocker"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/descriptionTextView"
-        tools:layout_editor_absoluteY="75dp" />
+    tools:context=".TimeInputActivity">
 
     <TableLayout
         android:id="@+id/timeTable"
@@ -34,7 +12,7 @@
         android:layout_height="646dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/blocker"
+        app:layout_constraintTop_toBottomOf="@+id/timeblank"
         app:layout_constraintVertical_bias="0.0">
 
         <TableRow
@@ -57,17 +35,17 @@
                 android:textSize="20sp" />
 
             <TextView
-                android:id="@+id/walkingTime"
+                android:id="@+id/walkingDistance"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="#FF0057"
+                android:textColor="#FF0000"
                 android:textSize="20sp" />
 
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="match_parent">
 
             <ImageView
                 android:id="@+id/boostedImage"
@@ -85,17 +63,17 @@
                 android:textSize="20sp" />
 
             <TextView
-                android:id="@+id/boostedTime"
+                android:id="@+id/boostedDistance"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="#FF0057"
+                android:textColor="#FF0000"
                 android:textSize="20sp" />
 
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="match_parent">
 
             <ImageView
                 android:id="@+id/evolveImage"
@@ -113,16 +91,17 @@
                 android:textSize="20sp" />
 
             <TextView
-                android:id="@+id/evolveTime"
+                android:id="@+id/evolveDistance"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="#FF0057"
+                android:textColor="#FF0000"
                 android:textSize="20sp" />
+
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="match_parent">
 
             <ImageView
                 android:id="@+id/oneWheelImage"
@@ -130,6 +109,7 @@
                 android:layout_height="50dp"
                 android:contentDescription="@string/OneWheel_XR"
                 tools:srcCompat="@drawable/onewheel" />
+
             <TextView
                 android:id="@+id/OneWheel"
                 android:layout_width="wrap_content"
@@ -139,17 +119,17 @@
                 android:textSize="20sp" />
 
             <TextView
-                android:id="@+id/oneWheelTime"
+                android:id="@+id/oneWheelDistance"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="#FF0057"
+                android:textColor="#FF0000"
                 android:textSize="20sp" />
 
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="match_parent">
 
             <ImageView
                 android:id="@+id/motoTecImage"
@@ -167,17 +147,17 @@
                 android:textSize="20sp" />
 
             <TextView
-                android:id="@+id/motoTecTime"
+                android:id="@+id/motoTecDistance"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="#FF0057"
+                android:textColor="#FF0000"
                 android:textSize="20sp" />
 
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="match_parent">
 
             <ImageView
                 android:id="@+id/segwayImage"
@@ -195,17 +175,17 @@
                 android:textSize="20sp" />
 
             <TextView
-                android:id="@+id/segwayTime"
+                android:id="@+id/segwayDistance"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="#FF0057"
+                android:textColor="#FF0000"
                 android:textSize="20sp" />
 
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="match_parent">
 
             <ImageView
                 android:id="@+id/segwayPlusImage"
@@ -223,17 +203,17 @@
                 android:textSize="20sp" />
 
             <TextView
-                android:id="@+id/segwayPlusTime"
+                android:id="@+id/segwayPlusDistance"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="#FF0057"
+                android:textColor="#FF0000"
                 android:textSize="20sp" />
 
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="match_parent">
 
             <ImageView
                 android:id="@+id/razorImage"
@@ -251,17 +231,17 @@
                 android:textSize="20sp" />
 
             <TextView
-                android:id="@+id/razorTime"
+                android:id="@+id/razorDistance"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="#FF0057"
+                android:textColor="#FF0000"
                 android:textSize="20sp" />
 
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="match_parent">
 
             <ImageView
                 android:id="@+id/geoBladeImage"
@@ -279,17 +259,17 @@
                 android:textSize="20sp" />
 
             <TextView
-                android:id="@+id/geoBladeTime"
+                android:id="@+id/geoBladeDistance"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="#FF0057"
+                android:textColor="#FF0000"
                 android:textSize="20sp" />
 
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="match_parent">
 
             <ImageView
                 android:id="@+id/hoverTraxImage"
@@ -307,13 +287,57 @@
                 android:textSize="20sp" />
 
             <TextView
-                android:id="@+id/hovertraxTime"
+                android:id="@+id/hovertraxDistance"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="#FF0057"
+                android:textColor="#FF0000"
                 android:textSize="20sp" />
 
         </TableRow>
     </TableLayout>
+
+    <TextView
+        android:id="@+id/timeInputHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/time_input_header"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.066" />
+
+    <EditText
+        android:id="@+id/timeblank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/result"
+        android:inputType="numberDecimal"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.079"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/timeInputHeader"
+        app:layout_constraintVertical_bias="0.006" />
+
+    <Button
+        android:id="@+id/computeDistance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:background="#A5C1EA"
+        android:text="@string/compute_distance"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/timeblank"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/timeblank"
+        app:layout_constraintTop_toBottomOf="@+id/timeInputHeader"
+        app:layout_constraintVertical_bias="0.083" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

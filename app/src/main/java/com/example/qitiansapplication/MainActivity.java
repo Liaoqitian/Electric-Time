@@ -91,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 String choice = (String) parent.getItemAtPosition(position);
-                speed = speedMap.get(choice);
+                if (speedMap != null && speedMap.containsKey(choice)) speed = speedMap.get(choice);
                 range = rangeMap.get(choice);
             }
 
@@ -126,9 +126,9 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 EditText NumEditText = (EditText) findViewById(R.id.distance);
                 TextView resultTextView = (TextView) findViewById(R.id.resultTextView);
+                distance = Double.parseDouble(NumEditText.getText().toString());
                 if (distance > range) resultTextView.setText("Exceeded");
                 else {
-                    distance = Double.parseDouble(NumEditText.getText().toString());
                     double time = speed != 0.0 ? distance / speed : 0.0;
                     resultTextView.setText(df.format(time * timeFactor));
                 }
@@ -141,6 +141,16 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent startIntent = new Intent(getApplicationContext(), OtherTransportationActivity.class);
                 startIntent.putExtra("distance", distance);
+                startIntent.putExtra("timeFactor", timeFactor);
+                startActivity(startIntent);
+            }
+        });
+
+        Button timeInputButton = (Button) findViewById(R.id.time_input);
+        timeInputButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent startIntent = new Intent(getApplicationContext(), TimeInputActivity.class);
                 startActivity(startIntent);
             }
         });
