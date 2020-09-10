@@ -7,13 +7,25 @@
     <string name="next">Next</string>
     <string name="previous">Previous</string>
 
-    <string name="hello_first_fragment">Hello first fragment</string>
-    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="more_information">Other Transportation Means</string>
+    <string name="time_input">Input Time You Have</string>
     <string name="compute_time">Compute Time</string>
     <string name="result">Time</string>
     <string name="select_your_means_of_transporation">Select your means of transporation</string>
     <string name="distance">distance</string>
     <string name="enter_the_distance_in_miles">Enter the distance (in miles)</string>
+    <string name="warning">Please input a valid distance</string>
+
+    <string name="Walking">Walking</string>
+    <string name="Boosted_Mini_S_Board">Boosted Mini S Board</string>
+    <string name="Evolve_Bamboo_GTR_2in1">Evolve Bamboo GTR 2in1</string>
+    <string name="OneWheel_XR">OneWheel XR</string>
+    <string name="MotoTec_Skateboard">MotoTec Skateboard</string>
+    <string name="Segway_Ninebot_S">Segway Ninebot S</string>
+    <string name="Segway_Ninebot_S_PLUS">Segway Ninebot S-PLUS</string>
+    <string name="Razor_Scooter">Razor Scooter</string>
+    <string name="GeoBlade_500">GeoBlade 500</string>
+    <string name="Hovertrax_Hoverboard">Hovertrax Hoverboard</string>
 
     <string-array name="electic_time">
         <item>Walking</item>
@@ -27,4 +39,11 @@
         <item>GeoBlade 500</item>
         <item>Hovertrax Hoverboard</item>
     </string-array>
+
+    <string-array name="time">
+        <item>Hours</item>
+        <item>Minutes</item>
+    </string-array>
+
+
 </resources>

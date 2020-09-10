@@ -7,12 +7,12 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
     <Button
-        android:id="@+id/goToOtherTransportation"
+        android:id="@+id/computeTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#A5C1EA"
         android:text="@string/compute_time"
-        android:textSize="20sp"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,14 +25,15 @@
         android:autofillHints=""
         android:ems="10"
         android:hint="@string/distance"
-        android:inputType="number"
+        android:inputType="number|numberDecimal"
         android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/goToOtherTransportation"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/computeTime"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.299" />
+        app:layout_constraintVertical_bias="0.326" />
 
     <TextView
         android:id="@+id/resultTextView"
@@ -42,10 +43,11 @@
         android:textColor="#050505"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/timespinner"
+        app:layout_constraintHorizontal_bias="0.525"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/goToOtherTransportation"
-        app:layout_constraintVertical_bias="0.431" />
+        app:layout_constraintTop_toBottomOf="@+id/computeTime"
+        app:layout_constraintVertical_bias="0.158" />
 
     <TextView
         android:id="@+id/textView4"
@@ -57,7 +59,8 @@
         app:layout_constraintBottom_toTopOf="@+id/distance"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.793" />
 
     <TextView
         android:id="@+id/textView5"
@@ -66,11 +69,12 @@
         android:text="@string/select_your_means_of_transporation"
         android:textColor="#000000"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/goToOtherTransportation"
+        app:layout_constraintBottom_toTopOf="@+id/computeTime"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/distance"
-        app:layout_constraintVertical_bias="0.165" />
+        app:layout_constraintVertical_bias="0.109" />
 
     <Spinner
         android:id="@+id/spinner"
@@ -80,18 +84,18 @@
         android:entries="@array/electic_time"
         android:spinnerMode="dropdown"
         android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/goToOtherTransportation"
+        app:layout_constraintBottom_toTopOf="@+id/computeTime"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5"
-        app:layout_constraintVertical_bias="0.355" />
+        app:layout_constraintVertical_bias="0.149" />
 
     <Button
         android:id="@+id/other_transportation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="More information"
+        android:text="@string/more_information"
         android:textColor="#040404"
         android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -99,18 +103,31 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/resultTextView" />
 
-    <TextView
-        android:id="@+id/textView6"
+    <Spinner
+        android:id="@+id/timespinner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="You need to travel"
-        android:textColor="#040404"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/resultTextView"
+        android:background="@android:drawable/btn_dropdown"
+        android:entries="@array/time"
+        android:spinnerMode="dropdown"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/other_transportation"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.513"
+        app:layout_constraintHorizontal_bias="0.722"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/goToOtherTransportation"
-        app:layout_constraintVertical_bias="0.833" />
+        app:layout_constraintTop_toBottomOf="@+id/computeTime"
+        app:layout_constraintVertical_bias="0.335" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/time_input"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/other_transportation"
+        app:layout_constraintVertical_bias="0.173" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

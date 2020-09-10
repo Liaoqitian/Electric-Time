@@ -27,7 +27,9 @@ public class MainActivity extends AppCompatActivity {
     // map to two decimal places
     private static DecimalFormat df = new DecimalFormat("0.00");
     double speed = 0.0;
-    int distance = 0;
+    int range = 0;
+    double distance = 0;
+    double timeFactor = 1;
     HashMap<String, Double> speedMap = new HashMap() {{
         put("Walking", 3.1);
         put("Boosted Mini S Board", 18.0);
@@ -54,6 +56,10 @@ public class MainActivity extends AppCompatActivity {
         put("Hovertrax Hoverboard", 6);
     }};
 
+    HashMap<String, Integer> timeMap = new HashMap<String, Integer>() {{
+        put("Hours", 1);
+        put("Minutes", 60);
+    }};
 
 
     @Override
@@ -86,6 +92,7 @@ public class MainActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 String choice = (String) parent.getItemAtPosition(position);
                 speed = speedMap.get(choice);
+                range = rangeMap.get(choice);
             }
 
             @Override
@@ -94,15 +101,37 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button computeTimeButton = (Button) findViewById(R.id.goToOtherTransportation);
+        Spinner timeSpinner = (Spinner) findViewById(R.id.timespinner);
+        ArrayAdapter<CharSequence> timeAdapter = ArrayAdapter.createFromResource(this,
+                R.array.time, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        timeSpinner.setAdapter(timeAdapter);
+
+        timeSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                String choice = (String) parent.getItemAtPosition(position);
+                timeFactor = timeMap.get(choice);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                // Auto-generated method stub
+            }
+        });
+
+        Button computeTimeButton = (Button) findViewById(R.id.computeTime);
         computeTimeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 EditText NumEditText = (EditText) findViewById(R.id.distance);
                 TextView resultTextView = (TextView) findViewById(R.id.resultTextView);
-                distance = Integer.parseInt(NumEditText.getText().toString());
-                double result = speed != 0.0 ? distance / speed : 0.0;
-                resultTextView.setText(df.format(result) + " hours");
+                if (distance > range) resultTextView.setText("Exceeded");
+                else {
+                    distance = Double.parseDouble(NumEditText.getText().toString());
+                    double time = speed != 0.0 ? distance / speed : 0.0;
+                    resultTextView.setText(df.format(time * timeFactor));
+                }
             }
         });
 
