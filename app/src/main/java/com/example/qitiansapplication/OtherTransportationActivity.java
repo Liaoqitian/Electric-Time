@@ -11,11 +11,9 @@ public class OtherTransportationActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.other_transportation_activity);
+        Integer distance = getIntent().getExtras().getInt("distance");
+        TextView descriptionTextView = (TextView) findViewById(R.id.descriptionTextView);
+        descriptionTextView.setText("In order to travel " + distance + " miles");
 
-        if (getIntent().hasExtra("com.example.qitiansapplication.SOMETHING")) {
-            Integer distance = getIntent().getExtras().getInt("distance");
-            TextView descriptionTextView = (TextView) findViewById(R.id.descriptionTextView);
-            descriptionTextView.setText(" hours");
-        }
     }
 }
