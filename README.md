@@ -16,6 +16,7 @@ The user can click on `OTHER TRANSPORTATION MEANS` to learn how much time it wou
 
 <img width = 30% height = auto src = "images/other(por).png"> <img width = 60% height = auto src = "images/other(lan).png">
 
-If the user inputs a really large value for distance that exceeds the range of the transportation, `exceeded` would be displayed. 
+If the user inputs a value as distance that exceeds the range of the transportation means, `exceeded` would be displayed. 
+
 <img width = 30% height = auto src = "images/exceed1(por).png"> <img width = 60% height = auto src = "images/exceed1(lan).png" >
 <img width = 30% height = auto src = "images/exceed2(por).png"> <img width = 60% height = auto src = "images/exceed2(lan).png" >
