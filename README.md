@@ -4,7 +4,7 @@ Note: The user will see the view on the left in portrait mode, and the view on t
 
 When the user opens the application, an interface like the one below will pop up. 
 
-<img >src = "images/initial(por).png"</img>
+<img src = "images/initial(por).png">
 
 
 
