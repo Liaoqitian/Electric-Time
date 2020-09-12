@@ -8,7 +8,7 @@
 
     <TableLayout
         android:id="@+id/timeTable"
-        android:layout_width="409dp"
+        android:layout_width="700dp"
         android:layout_height="646dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -28,24 +28,18 @@
 
             <TextView
                 android:id="@+id/walking"
-                android:layout_width="203dp"
+                android:layout_width="224dp"
                 android:layout_height="30dp"
                 android:text="@string/Walking"
                 android:textColor="#000000"
-                android:textSize="20sp" />
+                android:textSize="15sp" />
 
             <TextView
                 android:id="@+id/walkingDistance"
-                android:layout_width="wrap_content"
+                android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:textColor="#FF0000"
                 android:textSize="20sp" />
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
 
             <ImageView
                 android:id="@+id/boostedImage"
@@ -60,11 +54,11 @@
                 android:layout_height="wrap_content"
                 android:text="@string/Boosted_Mini_S_Board"
                 android:textColor="#000000"
-                android:textSize="20sp" />
+                android:textSize="15sp" />
 
             <TextView
                 android:id="@+id/boostedDistance"
-                android:layout_width="wrap_content"
+                android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:textColor="#FF0000"
                 android:textSize="20sp" />
@@ -88,7 +82,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/Evolve_Bamboo_GTR_2in1"
                 android:textColor="#000000"
-                android:textSize="20sp" />
+                android:textSize="15sp" />
 
             <TextView
                 android:id="@+id/evolveDistance"
@@ -96,12 +90,6 @@
                 android:layout_height="wrap_content"
                 android:textColor="#FF0000"
                 android:textSize="20sp" />
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
 
             <ImageView
                 android:id="@+id/oneWheelImage"
@@ -116,7 +104,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/OneWheel_XR"
                 android:textColor="#000000"
-                android:textSize="20sp" />
+                android:textSize="15sp" />
 
             <TextView
                 android:id="@+id/oneWheelDistance"
@@ -124,7 +112,6 @@
                 android:layout_height="wrap_content"
                 android:textColor="#FF0000"
                 android:textSize="20sp" />
-
         </TableRow>
 
         <TableRow
@@ -144,7 +131,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/MotoTec_Skateboard"
                 android:textColor="#000000"
-                android:textSize="20sp" />
+                android:textSize="15sp" />
 
             <TextView
                 android:id="@+id/motoTecDistance"
@@ -152,12 +139,6 @@
                 android:layout_height="wrap_content"
                 android:textColor="#FF0000"
                 android:textSize="20sp" />
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
 
             <ImageView
                 android:id="@+id/segwayImage"
@@ -172,7 +153,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/Segway_Ninebot_S"
                 android:textColor="#000000"
-                android:textSize="20sp" />
+                android:textSize="15sp" />
 
             <TextView
                 android:id="@+id/segwayDistance"
@@ -180,7 +161,6 @@
                 android:layout_height="wrap_content"
                 android:textColor="#FF0000"
                 android:textSize="20sp" />
-
         </TableRow>
 
         <TableRow
@@ -200,7 +180,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/Segway_Ninebot_S_PLUS"
                 android:textColor="#000000"
-                android:textSize="20sp" />
+                android:textSize="15sp" />
 
             <TextView
                 android:id="@+id/segwayPlusDistance"
@@ -208,12 +188,6 @@
                 android:layout_height="wrap_content"
                 android:textColor="#FF0000"
                 android:textSize="20sp" />
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
 
             <ImageView
                 android:id="@+id/razorImage"
@@ -228,7 +202,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/Razor_Scooter"
                 android:textColor="#000000"
-                android:textSize="20sp" />
+                android:textSize="15sp" />
 
             <TextView
                 android:id="@+id/razorDistance"
@@ -236,7 +210,6 @@
                 android:layout_height="wrap_content"
                 android:textColor="#FF0000"
                 android:textSize="20sp" />
-
         </TableRow>
 
         <TableRow
@@ -256,7 +229,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/GeoBlade_500"
                 android:textColor="#000000"
-                android:textSize="20sp" />
+                android:textSize="15sp" />
 
             <TextView
                 android:id="@+id/geoBladeDistance"
@@ -264,12 +237,6 @@
                 android:layout_height="wrap_content"
                 android:textColor="#FF0000"
                 android:textSize="20sp" />
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
 
             <ImageView
                 android:id="@+id/hoverTraxImage"
@@ -284,7 +251,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/Hovertrax_Hoverboard"
                 android:textColor="#000000"
-                android:textSize="20sp" />
+                android:textSize="15sp" />
 
             <TextView
                 android:id="@+id/hovertraxDistance"
@@ -292,8 +259,8 @@
                 android:layout_height="wrap_content"
                 android:textColor="#FF0000"
                 android:textSize="20sp" />
-
         </TableRow>
+
     </TableLayout>
 
     <TextView
