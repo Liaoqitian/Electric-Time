@@ -12,3 +12,6 @@ Then the user can enter the desired distance (in miles) and choose the desired m
 
 <img width = 30% height = auto src = "images/demo1(por).png"><img width = 60% height = auto src = "images/demo1(lan).png" >
 
+The user can click on `OTHER TRANSPORTATION MEANS` to learn how much time it would take to travel the same distance using other transportation means. 
+
+<img width = 30% height = auto src = "images/other(por).png"><img width = 60% height = auto src = "images/other(lan).png" >

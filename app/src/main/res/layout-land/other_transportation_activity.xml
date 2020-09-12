@@ -57,7 +57,7 @@
                 android:layout_height="30dp"
                 android:text="@string/Walking"
                 android:textColor="#000000"
-                android:textSize="15sp" />
+                android:textSize="17sp" />
 
             <TextView
                 android:id="@+id/walkingTime"
@@ -79,7 +79,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/Boosted_Mini_S_Board"
                 android:textColor="#000000"
-                android:textSize="15sp" />
+                android:textSize="17sp" />
 
             <TextView
                 android:id="@+id/boostedTime"
@@ -107,7 +107,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/Evolve_Bamboo_GTR_2in1"
                 android:textColor="#000000"
-                android:textSize="15sp" />
+                android:textSize="17sp" />
 
             <TextView
                 android:id="@+id/evolveTime"
@@ -129,7 +129,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/OneWheel_XR"
                 android:textColor="#000000"
-                android:textSize="15sp" />
+                android:textSize="17sp" />
 
             <TextView
                 android:id="@+id/oneWheelTime"
@@ -156,7 +156,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/MotoTec_Skateboard"
                 android:textColor="#000000"
-                android:textSize="15sp" />
+                android:textSize="17sp" />
 
             <TextView
                 android:id="@+id/motoTecTime"
@@ -178,7 +178,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/Segway_Ninebot_S"
                 android:textColor="#000000"
-                android:textSize="15sp" />
+                android:textSize="17sp" />
 
             <TextView
                 android:id="@+id/segwayTime"
@@ -205,7 +205,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/Segway_Ninebot_S_PLUS"
                 android:textColor="#000000"
-                android:textSize="15sp" />
+                android:textSize="17sp" />
 
             <TextView
                 android:id="@+id/segwayPlusTime"
@@ -227,7 +227,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/Razor_Scooter"
                 android:textColor="#000000"
-                android:textSize="15sp" />
+                android:textSize="17sp" />
 
             <TextView
                 android:id="@+id/razorTime"
@@ -255,7 +255,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/GeoBlade_500"
                 android:textColor="#000000"
-                android:textSize="15sp" />
+                android:textSize="17sp" />
 
             <TextView
                 android:id="@+id/geoBladeTime"
@@ -277,7 +277,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/Hovertrax_Hoverboard"
                 android:textColor="#000000"
-                android:textSize="15sp" />
+                android:textSize="17sp" />
 
             <TextView
                 android:id="@+id/hovertraxTime"

@@ -116,8 +116,8 @@ public class OtherTransportationActivity extends AppCompatActivity {
                 double speed = (speedMap != null) ? speedMap.get(index) : -1;
                 double time = speed != 0.0 ? distance / speed : 0.0;
                 String output = "";
-                if (timeFactor == 1) output = df.format(time) + " hours";
-                else if (timeFactor == 60) output = df.format(time * 60) + "minutes";
+                if (timeFactor == 1) output = df.format(time) + " h";
+                else if (timeFactor == 60) output = df.format(time * 60) + " min";
                 tv.setText(output);
             }
         }
