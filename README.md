@@ -8,4 +8,5 @@ When the user opens the application, an interface like the one below will pop up
 
 
 
+Then the user can enter the desired distance (in miles) and choose the desired mode of transportation from the dropdown menu. There are a total of 10 available choices. Then the user can pick the generated outcome to be represented in either hour (default) or minute. In the demo below, the user plans to travel 2.8 miles by OneWheel XR. 
 
