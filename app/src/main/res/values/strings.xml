@@ -10,8 +10,7 @@
     <string name="more_information">Other Transportation Means</string>
     <string name="time_input">Enter Time You Have</string>
     <string name="time_input_header">Enter the amount of time (in minutes)</string>
-    <string name="compute_time">Compute Time</string>
-    <string name="compute_distance">Compute Distance</string>
+    <string name="compute">Compute</string>
     <string name="result">Time</string>
     <string name="select_your_means_of_transporation">Select your means of transporation</string>
     <string name="distance">distance</string>

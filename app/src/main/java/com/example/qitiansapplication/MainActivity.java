@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
     int range = 0;
     double distance = 0;
     double timeFactor = 1;
-    HashMap<String, Double> speedMap = new HashMap() {{
+    HashMap<String, Double> speedMap = new HashMap<String, Double>() {{
         put("Walking", 3.1);
         put("Boosted Mini S Board", 18.0);
         put("Evolve Bamboo GTR 2in1", 24.0);
@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
         put("Hovertrax Hoverboard", 9.0);
     }};
 
-    HashMap<Integer, Integer> rangeMap = new HashMap() {{
+    HashMap<String, Integer> rangeMap = new HashMap<String, Integer>() {{
         put("Walking", 30);
         put("Boosted Mini S Board", 7);
         put("Evolve Bamboo GTR 2in1", 31);

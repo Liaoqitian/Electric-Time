@@ -4,19 +4,44 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TimeInputActivity">
+    tools:context=".OtherTransportationActivity">
+
+    <TextView
+        android:id="@+id/descriptionTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/warning"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.079" />
+
+    <TextView
+        android:id="@+id/blocker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/descriptionTextView"
+        tools:layout_editor_absoluteY="75dp" />
 
     <TableLayout
         android:id="@+id/timeTable"
-        android:layout_width="700dp"
-        android:layout_height="646dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/timeblank"
+        app:layout_constraintTop_toTopOf="@+id/blocker"
         app:layout_constraintVertical_bias="0.0">
 
         <TableRow
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <ImageView
@@ -28,17 +53,17 @@
 
             <TextView
                 android:id="@+id/walking"
-                android:layout_width="203dp"
+                android:layout_width="wrap_content"
                 android:layout_height="30dp"
                 android:text="@string/Walking"
                 android:textColor="#000000"
                 android:textSize="15sp" />
 
             <TextView
-                android:id="@+id/walkingDistance"
+                android:id="@+id/walkingTime"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
-                android:textColor="#FF0000"
+                android:textColor="#FF0057"
                 android:textSize="20sp" />
 
             <ImageView
@@ -57,10 +82,10 @@
                 android:textSize="15sp" />
 
             <TextView
-                android:id="@+id/boostedDistance"
+                android:id="@+id/boostedTime"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
-                android:textColor="#FF0000"
+                android:textColor="#FF0057"
                 android:textSize="20sp" />
 
         </TableRow>
@@ -85,10 +110,10 @@
                 android:textSize="15sp" />
 
             <TextView
-                android:id="@+id/evolveDistance"
+                android:id="@+id/evolveTime"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="#FF0000"
+                android:textColor="#FF0057"
                 android:textSize="20sp" />
 
             <ImageView
@@ -107,10 +132,10 @@
                 android:textSize="15sp" />
 
             <TextView
-                android:id="@+id/oneWheelDistance"
+                android:id="@+id/oneWheelTime"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="#FF0000"
+                android:textColor="#FF0057"
                 android:textSize="20sp" />
         </TableRow>
 
@@ -134,10 +159,10 @@
                 android:textSize="15sp" />
 
             <TextView
-                android:id="@+id/motoTecDistance"
+                android:id="@+id/motoTecTime"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="#FF0000"
+                android:textColor="#FF0057"
                 android:textSize="20sp" />
 
             <ImageView
@@ -156,10 +181,10 @@
                 android:textSize="15sp" />
 
             <TextView
-                android:id="@+id/segwayDistance"
+                android:id="@+id/segwayTime"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="#FF0000"
+                android:textColor="#FF0057"
                 android:textSize="20sp" />
         </TableRow>
 
@@ -183,10 +208,10 @@
                 android:textSize="15sp" />
 
             <TextView
-                android:id="@+id/segwayPlusDistance"
+                android:id="@+id/segwayPlusTime"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="#FF0000"
+                android:textColor="#FF0057"
                 android:textSize="20sp" />
 
             <ImageView
@@ -205,11 +230,12 @@
                 android:textSize="15sp" />
 
             <TextView
-                android:id="@+id/razorDistance"
+                android:id="@+id/razorTime"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="#FF0000"
+                android:textColor="#FF0057"
                 android:textSize="20sp" />
+
         </TableRow>
 
         <TableRow
@@ -232,10 +258,10 @@
                 android:textSize="15sp" />
 
             <TextView
-                android:id="@+id/geoBladeDistance"
+                android:id="@+id/geoBladeTime"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="#FF0000"
+                android:textColor="#FF0057"
                 android:textSize="20sp" />
 
             <ImageView
@@ -254,58 +280,42 @@
                 android:textSize="15sp" />
 
             <TextView
-                android:id="@+id/hovertraxDistance"
+                android:id="@+id/hovertraxTime"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="#FF0000"
+                android:textColor="#FF0057"
                 android:textSize="20sp" />
         </TableRow>
 
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </TableRow>
     </TableLayout>
-
-    <TextView
-        android:id="@+id/timeInputHeader"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/time_input_header"
-        android:textColor="#000000"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.066" />
-
-    <EditText
-        android:id="@+id/timeblank"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="@string/result"
-        android:inputType="numberDecimal"
-        android:textAlignment="center"
-        android:textColor="#000000"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.238"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/timeInputHeader"
-        app:layout_constraintVertical_bias="0.006" />
-
-    <Button
-        android:id="@+id/computeDistance"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="16dp"
-        android:background="#A5C1EA"
-        android:text="@string/compute"
-        android:textSize="15sp"
-        app:layout_constraintBottom_toTopOf="@+id/timeblank"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/timeblank"
-        app:layout_constraintTop_toBottomOf="@+id/timeInputHeader"
-        app:layout_constraintVertical_bias="0.083" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
