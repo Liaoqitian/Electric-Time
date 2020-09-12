@@ -1,5 +1,14 @@
 # electric-time
+## Table of Contents
+  - [User Manual (Video)](#Interface-Demonstration)
+  - [User Manual (Text and Images)](#basic-setup)
+  - [Basic Usage](#basic-usage)
+  - [Examples](#examples)
+  - [Contributing](#contributing)
 
+## User Manual (Video)
+
+## User Manual (Text and Images)
 Note: The user will see the view on the left in portrait mode, and the view on the right in landscape mode. 
 
 When the user opens the application, an interface like the one below will pop up. 
@@ -21,4 +30,5 @@ If the user inputs distance that exceeds the range of the electric transport, `e
 <img width = 30% height = auto src = "images/exceed2(por).png"> <img width = 60% height = auto src = "images/exceed2(lan).png" >
 
 On the other hand, the user can click on `Enter time you have` on the main interface to input how much time he has. Then he would be able to see how far they can travel on various transportation types after clicking `COMPUTE`. In the demo below, the user has 15 minutes. 
+
 <img width = 30% height = auto src = "images/time(por).png"> <img width = 60% height = auto src = "images/time(lan).png" >
