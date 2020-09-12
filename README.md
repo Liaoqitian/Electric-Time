@@ -1,7 +1,7 @@
 # electric-time
 ## Table of Contents
-  - [User Manual (Video)](#Interface-Demonstration)
-  - [User Manual (Text and Images)](#basic-setup)
+  - [User Manual (Video)](#User-Manual-Video)
+  - [User Manual (Text and Images)](#User-Manual-Text-and-Images)
   - [Basic Usage](#basic-usage)
   - [Examples](#examples)
   - [Contributing](#contributing)
