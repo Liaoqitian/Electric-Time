@@ -5,6 +5,7 @@
   - [Contact](#Contact)
 
 ## User Manual (Video)
+https://www.youtube.com/watch?v=rDSYECEj4tk&t=2s
 
 ## User Manual (Text and Images)
 Note: The user will see the view on the left in portrait mode, and the view on the right in landscape mode. 
