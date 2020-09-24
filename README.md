@@ -1,4 +1,4 @@
-# electric-time
+# Electric-Time
 ## Table of Contents
   - [User Manual (Video)](#User-Manual-Video)
   - [User Manual (Text and Images)](#User-Manual-Text-and-Images)
